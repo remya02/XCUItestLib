@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-class BasePage {
+public class BasePage {
     // MARK: - Reference applications under test
     public lazy var app = BaseTest().testApp
     // MARK: - Page Elements

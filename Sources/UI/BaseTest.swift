@@ -2,7 +2,7 @@
 
 import XCTest
 
-class BaseTest: XCTestCase {
+public class BaseTest: XCTestCase {
 
 //    var statementScreen: StatementScreen!
 //    var loginScreen: LoginScreen!
