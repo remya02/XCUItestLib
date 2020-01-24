@@ -11,7 +11,7 @@ public class BaseTest: XCTestCase {
     
     //let loginElements = LoginElements()
     
-    override func setUp() {
+    override public func setUp() {
         testApp.launch()
         XCUIDevice.shared.orientation = .portrait
         continueAfterFailure = false
@@ -35,7 +35,7 @@ public class BaseTest: XCTestCase {
 //        }
 //    }
     
-    override func tearDown() {
+    override public func tearDown() {
         testApp.terminate()
     }
     

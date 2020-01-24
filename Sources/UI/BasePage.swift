@@ -5,21 +5,21 @@ public class BasePage {
     // MARK: - Reference applications under test
     public lazy var app = BaseTest().testApp
     // MARK: - Page Elements
-    lazy var backButton = app.navigationBars.buttons.element(boundBy: 0)
+//    lazy var backButton = app.navigationBars.buttons.element(boundBy: 0)
     lazy var keyboard = app.keyboards.element(boundBy: 0)
-    lazy var doneButton = app.buttons[uIToolBarDoneButton]
-    lazy var navBarCancelButton = app.navigationBars.buttons[navBarCancelButtonTitle]
-    lazy var navBarCloseButton = app.navigationBars.buttons[navBarCloseButtonTitle]
-    lazy var navBarDeleteButton = app.navigationBars.buttons[navBarDeleteButtonTitle]
-    lazy var navBarDoneButton = app.navigationBars.buttons[navBarDoneButtonTitle]
-    lazy var navBarEditButton = app.navigationBars.buttons[navBarEditButtonTitle]
-    lazy var navBarSkipButton = app.navigationBars.buttons[navBarSkipButtonTitle]
+//    lazy var doneButton = app.buttons[uIToolBarDoneButton]
+//    lazy var navBarCancelButton = app.navigationBars.buttons[navBarCancelButtonTitle]
+//    lazy var navBarCloseButton = app.navigationBars.buttons[navBarCloseButtonTitle]
+//    lazy var navBarDeleteButton = app.navigationBars.buttons[navBarDeleteButtonTitle]
+//    lazy var navBarDoneButton = app.navigationBars.buttons[navBarDoneButtonTitle]
+//    lazy var navBarEditButton = app.navigationBars.buttons[navBarEditButtonTitle]
+//    lazy var navBarSkipButton = app.navigationBars.buttons[navBarSkipButtonTitle]
     
     // MARK: - Methods
-    
-     let dashBoardScreenElements = DashboardScreenElements()
-     let loginElements = LoginElements()
-    
+//
+//     let dashBoardScreenElements = DashboardScreenElements()
+//     let loginElements = LoginElements()
+//
 
  /*Tap methods for buttons */
     func tapElement(element: XCUIElement, elementName: String = "Element") {
@@ -27,44 +27,44 @@ public class BasePage {
     }
     
     
-    func tapBackButton() {
-        tapElement(element: backButton, elementName: "Back Button")
-    }
-    
-   
-    func tapCoordinate(xCoordinate: Double, yCoordinate: Double) {
-        let normalized = app.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0))
-        let coordinate = normalized.withOffset(CGVector(dx: xCoordinate, dy: yCoordinate))
-        coordinate.tap()
-    }
-    
-    func tapNavBarCancelButton() {
-        tapElement(element: navBarCancelButton, elementName: "Navigation Bar Cancel Button")
-    }
-    
-    func tapNavBarEditButton() {
-        tapElement(element: navBarEditButton, elementName: "\(navBarEditButton) Not Found")
-    }
-    
-    func tapNavBarDeleteButton() {
-        tapElement(element: navBarDeleteButton, elementName: "\(navBarDeleteButton) Not Found")
-    }
-    
-    func tapNavBarDoneButton() {
-        tapElement(element: navBarDoneButton, elementName: "\(navBarDoneButton) Not Found")
-    }
-    
-    func tapNavBarSkipButton() {
-        tapElement(element: navBarSkipButton, elementName: "\(navBarSkipButton) Not Found")
-    }
-
-    func verifyNavBarEditButton() {
-        waitForElement(navBarEditButton)
-    }
-    
-    func verifyNavBarDoneButton() {
-        waitForElement(navBarDoneButton)
-    }
+//    func tapBackButton() {
+//        tapElement(element: backButton, elementName: "Back Button")
+//    }
+//
+//
+//    func tapCoordinate(xCoordinate: Double, yCoordinate: Double) {
+//        let normalized = app.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0))
+//        let coordinate = normalized.withOffset(CGVector(dx: xCoordinate, dy: yCoordinate))
+//        coordinate.tap()
+//    }
+//
+//    func tapNavBarCancelButton() {
+//        tapElement(element: navBarCancelButton, elementName: "Navigation Bar Cancel Button")
+//    }
+//
+//    func tapNavBarEditButton() {
+//        tapElement(element: navBarEditButton, elementName: "\(navBarEditButton) Not Found")
+//    }
+//
+//    func tapNavBarDeleteButton() {
+//        tapElement(element: navBarDeleteButton, elementName: "\(navBarDeleteButton) Not Found")
+//    }
+//
+//    func tapNavBarDoneButton() {
+//        tapElement(element: navBarDoneButton, elementName: "\(navBarDoneButton) Not Found")
+//    }
+//
+//    func tapNavBarSkipButton() {
+//        tapElement(element: navBarSkipButton, elementName: "\(navBarSkipButton) Not Found")
+//    }
+//
+//    func verifyNavBarEditButton() {
+//        waitForElement(navBarEditButton)
+//    }
+//
+//    func verifyNavBarDoneButton() {
+//        waitForElement(navBarDoneButton)
+//    }
     
     /*Keyboard related methods */
     
@@ -86,7 +86,7 @@ public class BasePage {
     }
     
     func verifyKeyboard(isVisible: Bool) {
-        waitForElement(keyboard, isVisible, nFiveSeconds, "keyboard")
+        waitForElement(keyboard, isVisible, 5.0, "keyboard")
     }
     
     /* Verifying the value is empty*/
@@ -105,7 +105,7 @@ public class BasePage {
     
     
     // MARK: - Wait Methods
-    func waitForElement(_ element: XCUIElement, _ toExist: Bool = true, _ timeOut: Double = nFiveSeconds, _ elementName: String = "element", file: StaticString = #file, line: UInt = #line) {
+    func waitForElement(_ element: XCUIElement, _ toExist: Bool = true, _ timeOut: Double = 5.0, _ elementName: String = "element", file: StaticString = #file, line: UInt = #line) {
         let predicate = NSPredicate(format: "exists == \(toExist)")
         let expectation = XCTNSPredicateExpectation(predicate: predicate, object: element)
         let result = XCTWaiter().wait(for: [expectation], timeout: timeOut)
@@ -127,7 +127,7 @@ public class BasePage {
     func swipeLeft(element: XCUIElement) {
         var swipeCount = 0
         while(swipeCount < 10) {
-            if(element.waitForExistence(timeout: nTwoSeconds)){break}
+            if(element.waitForExistence(timeout: 2.0)){break}
             app.gentleSwipe(.left)
             swipeCount = swipeCount + 1
         }
