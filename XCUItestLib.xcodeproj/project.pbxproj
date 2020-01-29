@@ -15,6 +15,9 @@
 		8260B43323DAD86600198249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8260B43123DAD86600198249 /* LaunchScreen.storyboard */; };
 		8260B43E23DAD86600198249 /* SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B43D23DAD86600198249 /* SampleUITests.swift */; };
 		8260B44723DAD8C600198249 /* XCUItestLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B44623DAD8C600198249 /* XCUItestLib.swift */; };
+		8260B48723E1C45200198249 /* BasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B48623E1C45200198249 /* BasePage.swift */; };
+		8260B48923E1C4A600198249 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B48823E1C4A600198249 /* BaseTest.swift */; };
+		8260B48B23E1C50200198249 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B48A23E1C50200198249 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		8260B43D23DAD86600198249 /* SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUITests.swift; sourceTree = "<group>"; };
 		8260B43F23DAD86600198249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8260B44623DAD8C600198249 /* XCUItestLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUItestLib.swift; sourceTree = "<group>"; };
+		8260B48623E1C45200198249 /* BasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePage.swift; sourceTree = "<group>"; };
+		8260B48823E1C4A600198249 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		8260B48A23E1C50200198249 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,9 @@
 		8260B3C123D1923100198249 = {
 			isa = PBXGroup;
 			children = (
+				8260B48A23E1C50200198249 /* Logger.swift */,
+				8260B48823E1C4A600198249 /* BaseTest.swift */,
+				8260B48623E1C45200198249 /* BasePage.swift */,
 				8260B44623DAD8C600198249 /* XCUItestLib.swift */,
 				8260B3DB23D1A38600198249 /* XcuitestLib.podspec */,
 				8260B42723DAD86400198249 /* Sample */,
@@ -264,6 +273,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8260B44723DAD8C600198249 /* XCUItestLib.swift in Sources */,
+				8260B48923E1C4A600198249 /* BaseTest.swift in Sources */,
+				8260B48723E1C45200198249 /* BasePage.swift in Sources */,
+				8260B48B23E1C50200198249 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +364,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -416,6 +432,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
