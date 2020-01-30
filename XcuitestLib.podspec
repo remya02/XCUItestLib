@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.author           = { 'remya' => 'remya.anjamkudi@infosys.com' }
     s.source           = { :git => 'https://github.com/remya02/XCUItestLib.git', :tag => s.version.to_s }
 
-    s.ios.deployment_target = '12.1'
+    s.ios.deployment_target = '10.1'
     #s.tvos.deployment_target = '10.3'
     s.swift_version = '4.0'
     s.source_files = 'Sources/**/*'
