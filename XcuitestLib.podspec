@@ -14,11 +14,11 @@ Pod::Spec.new do |s|
 
     s.ios.deployment_target = '12.1'
     #s.tvos.deployment_target = '10.3'
-    #s.swift_version = '4.1.2'
+    s.swift_version = '4.0'
     s.source_files = 'Sources/**/*'
 
-    s.weak_framework = "XCTest"
+    s.framework = 'XCTest'
     s.pod_target_xcconfig = {
-        'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks"',
+        'FRAMEWORK_SEARCH_PATHS' => '$(PLATFORM_DIR)/Developer/Library/Frameworks'
     }
 end
