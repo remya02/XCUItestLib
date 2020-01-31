@@ -9,12 +9,12 @@
 import Foundation
 import XCTest
 
-class BasePage {
+open class BasePage {
     // MARK: - Reference applications under test
-    public lazy var app = BaseTest().testApp
+    public lazy var app = BaseTest().app
     // MARK: - Page Elements
-    lazy var backButton = app.navigationBars.buttons.element(boundBy: 0)
-    lazy var keyboard = app.keyboards.element(boundBy: 0)
+    lazy var backButton = app!.navigationBars.buttons.element(boundBy: 0)
+    lazy var keyboard = app!.keyboards.element(boundBy: 0)
 //    lazy var doneButton = app.buttons[uIToolBarDoneButton]
 //    lazy var navBarCancelButton = app.navigationBars.buttons[navBarCancelButtonTitle]
 //    lazy var navBarCloseButton = app.navigationBars.buttons[navBarCloseButtonTitle]
@@ -40,7 +40,7 @@ class BasePage {
     
     
     func tapCoordinate(xCoordinate: Double, yCoordinate: Double) {
-        let normalized = app.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0))
+        let normalized = app!.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0))
         let coordinate = normalized.withOffset(CGVector(dx: xCoordinate, dy: yCoordinate))
         coordinate.tap()
     }
@@ -89,7 +89,7 @@ class BasePage {
             if characterCountOfTextField > 0 {
                 let deleteStringCharacter = String(repeating: XCUIKeyboardKey.delete.rawValue, count: characterCountOfTextField)
                 textField.tap()
-                app.typeText(deleteStringCharacter)
+                app!.typeText(deleteStringCharacter)
             }
         }
     }
@@ -136,12 +136,12 @@ class BasePage {
     
     func scrollDown() {
         Log.info("Page scrolled dowm")
-        app.swipeDown()
+        app!.swipeDown()
     }
     
     func scrollUp() {
         Log.info("Page scrolled up")
-        app.swipeUp()
+        app!.swipeUp()
     }
     
     //Swipe methods
@@ -150,7 +150,7 @@ class BasePage {
         var swipeCount = 0
         while(swipeCount < 10) {
             if(element.waitForExistence(timeout: 2.0)){break}
-            app.gentleSwipe(.left)
+            app!.gentleSwipe(.left)
             swipeCount = swipeCount + 1
         }
         waitForElement(element)
@@ -160,7 +160,7 @@ class BasePage {
         Log.info("Swipe up the page")
         var swipeCount = 0
         while(swipeCount < 10 && !element.isHittable) {
-            app.gentleSwipe(.up)
+            app!.gentleSwipe(.up)
             swipeCount = swipeCount + 1
             sleep(5)
         }
@@ -172,7 +172,7 @@ class BasePage {
         Log.info("Swipe down the page")
         var swipeCount = 0
         while(swipeCount < 3 && !element.isHittable) {
-            app.swipeDown()
+            app!.swipeDown()
             swipeCount = swipeCount + 1
             sleep(2)
         }
@@ -183,7 +183,7 @@ class BasePage {
     func gentleSwipeDown(element: XCUIElement) {
         var swipeCount = 0
         while(swipeCount < 10 && !element.isHittable) {
-            app.gentleSwipe(.down)
+            app!.gentleSwipe(.down)
             swipeCount = swipeCount + 1
             sleep(2)
         }
@@ -194,7 +194,7 @@ class BasePage {
     func gentleSwipeUp(_ element: XCUIElement) {
         var swipeCount = 0
         while(swipeCount < 10 && !element.isHittable) {
-            app.gentleSwipe(.up)
+            app!.gentleSwipe(.up)
             swipeCount = swipeCount + 1
             sleep(4)
         }
@@ -205,14 +205,14 @@ class BasePage {
     
     func verifyTheTextIsVisible(_ text: String) {
         let predicate = NSPredicate(format: "label LIKE '\(text)'")
-        let result = app.staticTexts.element(matching: predicate)
+        let result = app!.staticTexts.element(matching: predicate)
         XCTAssert(result.exists)
         Log.pass("The text is visible and the text value is '\(text)'")
     }
     
     func isOnScreen(element: XCUIElement) -> Bool {
         // An element might exist but be hiding off-screen
-        let windowFrame = app.windows.element(boundBy: 0).frame
+        let windowFrame = app!.windows.element(boundBy: 0).frame
         let elementFrame = element.frame
         return windowFrame.intersects(elementFrame)
         Log.pass("Element is on the screen")

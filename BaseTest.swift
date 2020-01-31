@@ -10,43 +10,24 @@
 
 import XCTest
 
-class BaseTest: XCTestCase {
+open class BaseTest: XCTestCase {
     
-    //    var statementScreen: StatementScreen!
-    //    var loginScreen: LoginScreen!
-    //    var dashboardScreen: DashboardScreen!
-    var testApp = XCUIApplication()
+    // MARK: Properties
+    /// Stores `XCUIApplication` for the duration of the test.
+    open var app: XCUIApplication!
     
-    //let loginElements = LoginElements()
-    
-    override func setUp() {
-        testApp.launch()
-        XCUIDevice.shared.orientation = .portrait
+    // MARK: Methods
+    /// Setup method called before the invocation of each test method in the class.
+    override open func setUp() {
+        super.setUp()
+        app = XCUIApplication()
         continueAfterFailure = false
     }
     
-    //    func addTestsWithData(dict: Dictionary<String ,String>, toTestSuite testSuite: XCTestSuite, currentClass: AnyClass){
-    //
-    //        let className = String(NSStringFromClass(currentClass).split(separator: ".").last!)
-    //        let testSuite = XCTestSuite(name:className)
-    //        let invocations = currentClass.testInvocations
-    //
-    //        for invocation in invocations! {
-    //            let testcaseId = invocation.selector.description
-    //            let data = ReadData().getDataFromDataMapAlt(testId: testcaseId)
-    //            for (key,dataRow) in data.enumerated(){
-    //                let testCase = LoginScreenTests(invocation: invocation)
-    //                //let testCase = self(invocation: invocation)
-    //                testCase.dataDict = dataRow.value
-    //                testSuite.addTest(testCase)
-    //            }
-    //        }
-    //    }
-    
-    override func tearDown() {
-        testApp.terminate()
+    /// Teardown method called after the invocation of each test method in the class.
+    override open func tearDown() {
+        app = nil
+        super.tearDown()
     }
-    
 }
-
 
