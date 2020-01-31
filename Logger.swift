@@ -18,7 +18,7 @@ enum LogEvent: String {
 }
 
 
-class Log {
+open class Log {
     
     class func step( _ object: Any) {
         let message = "\(LogEvent.step.rawValue) -> \(object)\n"
@@ -43,7 +43,7 @@ class Log {
     
 }
 
-func writeToFile(message: String){
+open func writeToFile(message: String){
     let fileName = "Test"
     let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
     

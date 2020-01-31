@@ -18,6 +18,7 @@
 		8260B48723E1C45200198249 /* BasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B48623E1C45200198249 /* BasePage.swift */; };
 		8260B48923E1C4A600198249 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B48823E1C4A600198249 /* BaseTest.swift */; };
 		8260B48B23E1C50200198249 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B48A23E1C50200198249 /* Logger.swift */; };
+		829F237423E4649C0021C9CF /* Sources in Resources */ = {isa = PBXBuildFile; fileRef = 829F237323E4649C0021C9CF /* Sources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8260B48623E1C45200198249 /* BasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePage.swift; sourceTree = "<group>"; };
 		8260B48823E1C4A600198249 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		8260B48A23E1C50200198249 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		829F237323E4649C0021C9CF /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		8260B3C123D1923100198249 = {
 			isa = PBXGroup;
 			children = (
+				829F237323E4649C0021C9CF /* Sources */,
 				8260B48A23E1C50200198249 /* Logger.swift */,
 				8260B48823E1C4A600198249 /* BaseTest.swift */,
 				8260B48623E1C45200198249 /* BasePage.swift */,
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8260B3E823D1A56E00198249 /* XcuitestLib.podspec in Resources */,
+				829F237423E4649C0021C9CF /* Sources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

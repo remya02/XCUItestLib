@@ -7,10 +7,10 @@ Pod::Spec.new do |s|
     This is used for reusing the libraries for XCUItest
     DESC
 
-    s.homepage         = 'https://infygit.ad.infosys.com/Remya.Anjamkudi/xcuitestlib.git'
+    s.homepage         = 'https://github.com/remya02/XCUItestLib'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'remya' => 'remya.anjamkudi@infosys.com' }
-    s.source           = { :git => 'https://github.com/remya02/XCUItestLib.git', :tag => s.version.to_s }
+    s.source           = { :git => 'https://github.com/remya02/XCUItestLib.git', :tag => "#{s.version}" }
 
     s.ios.deployment_target = '10.1'
     #s.tvos.deployment_target = '10.3'

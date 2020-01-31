@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReadData {
+open class ReadData {
     
     func getDataFromDataMap(testId: String) -> Array<String> {
         // let datamap = DataMap()
@@ -42,7 +42,7 @@ class ReadData {
         
     }
     
-    func getDataFromDataMapAlt(testId: String) -> Dictionary<Int, Dictionary<String, String>>{
+   open func getDataFromDataMapAlt(testId: String) -> Dictionary<Int, Dictionary<String, String>>{
         // let datamap = DataMap()
         //var testData = [String]()
         
@@ -76,7 +76,7 @@ class ReadData {
     }
     
     
-    func getDataFromInputTextAlt(row : String, inputFile: String) -> Dictionary<String, String>{
+   open func getDataFromInputTextAlt(row : String, inputFile: String) -> Dictionary<String, String>{
         var dataRow=Dictionary<String, String>()
         
         var headerArray=[String]()
@@ -122,7 +122,7 @@ class ReadData {
         return dataRow
     }
    
-    func getDataFromInputText(row : String, inputFile: String) -> Array<String>{
+   open func getDataFromInputText(row : String, inputFile: String) -> Array<String>{
         var dataArray=[String]()
         
         let bundle = Bundle(for: type(of: self))
