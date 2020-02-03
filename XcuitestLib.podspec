@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '10.1'
     #s.tvos.deployment_target = '10.3'
     s.swift_version = '4.0'
-    s.source_files = "XCUItestLib", "XCUItestLib/**/*.{h,m}"
+    s.source_files = 'XCUItestLib/*'
 
     s.framework = 'XCTest'
     s.pod_target_xcconfig = {
