@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'XcuitestLib'
-    s.version          = '2.0.0'
+    s.version          = '2.0.2'
     s.summary          = 'Library for UItest'
 
     s.description      = <<-DESC
