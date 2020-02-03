@@ -15,26 +15,26 @@ open class BasePage {
     // MARK: - Page Elements
     lazy var backButton = app!.navigationBars.buttons.element(boundBy: 0)
     lazy var keyboard = app!.keyboards.element(boundBy: 0)
-//    lazy var doneButton = app.buttons[uIToolBarDoneButton]
-//    lazy var navBarCancelButton = app.navigationBars.buttons[navBarCancelButtonTitle]
-//    lazy var navBarCloseButton = app.navigationBars.buttons[navBarCloseButtonTitle]
-//    lazy var navBarDeleteButton = app.navigationBars.buttons[navBarDeleteButtonTitle]
-//    lazy var navBarDoneButton = app.navigationBars.buttons[navBarDoneButtonTitle]
-//    lazy var navBarEditButton = app.navigationBars.buttons[navBarEditButtonTitle]
-//    lazy var navBarSkipButton = app.navigationBars.buttons[navBarSkipButtonTitle]
+    //    lazy var doneButton = app.buttons[uIToolBarDoneButton]
+    //    lazy var navBarCancelButton = app.navigationBars.buttons[navBarCancelButtonTitle]
+    //    lazy var navBarCloseButton = app.navigationBars.buttons[navBarCloseButtonTitle]
+    //    lazy var navBarDeleteButton = app.navigationBars.buttons[navBarDeleteButtonTitle]
+    //    lazy var navBarDoneButton = app.navigationBars.buttons[navBarDoneButtonTitle]
+    //    lazy var navBarEditButton = app.navigationBars.buttons[navBarEditButtonTitle]
+    //    lazy var navBarSkipButton = app.navigationBars.buttons[navBarSkipButtonTitle]
     
     // MARK: - Methods
     
     
     /*Tap methods for buttons */
     func tapElement(element: XCUIElement, elementName: String = "Element") {
-       // Log.info("'\(elementName)'tap")
+        // Log.info("'\(elementName)'tap")
         element.tap()
     }
     
     
     func tapBackButton() {
-       // Log.info("Back button tap")
+        // Log.info("Back button tap")
         tapElement(element: backButton, elementName: "Back Button")
     }
     
@@ -45,41 +45,41 @@ open class BasePage {
         coordinate.tap()
     }
     
-//    func tapNavBarCancelButton() {
-//        Log.info("NavBar cancel button tap")
-//        tapElement(element: navBarCancelButton, elementName: "Navigation Bar Cancel Button")
-//    }
-//
-//    func tapNavBarEditButton() {
-//        Log.info("NavBar Edit button tap")
-//        tapElement(element: navBarEditButton, elementName: "\(navBarEditButton) Not Found")
-//    }
-//
-//    func tapNavBarDeleteButton() {
-//        Log.info("NavBar Delete button tap")
-//        tapElement(element: navBarDeleteButton, elementName: "\(navBarDeleteButton) Not Found")
-//    }
-//
-//    func tapNavBarDoneButton() {
-//        Log.info("NavBar Done button tap")
-//        tapElement(element: navBarDoneButton, elementName: "\(navBarDoneButton) Not Found")
-//    }
-//
-//    func tapNavBarSkipButton() {
-//        Log.info("NavBar Skip button tap")
-//        tapElement(element: navBarSkipButton, elementName: "\(navBarSkipButton) Not Found")
-//    }
-//
-//    func verifyNavBarEditButton() {
-//        waitForElement(navBarEditButton)
-//        Log.pass("NavBar Edit button is visible")
-//    }
-//
-//    func verifyNavBarDoneButton() {
-//        waitForElement(navBarDoneButton)
-//        Log.pass("NavBar Done button is visible")
-//    }
-//
+    //    func tapNavBarCancelButton() {
+    //        Log.info("NavBar cancel button tap")
+    //        tapElement(element: navBarCancelButton, elementName: "Navigation Bar Cancel Button")
+    //    }
+    //
+    //    func tapNavBarEditButton() {
+    //        Log.info("NavBar Edit button tap")
+    //        tapElement(element: navBarEditButton, elementName: "\(navBarEditButton) Not Found")
+    //    }
+    //
+    //    func tapNavBarDeleteButton() {
+    //        Log.info("NavBar Delete button tap")
+    //        tapElement(element: navBarDeleteButton, elementName: "\(navBarDeleteButton) Not Found")
+    //    }
+    //
+    //    func tapNavBarDoneButton() {
+    //        Log.info("NavBar Done button tap")
+    //        tapElement(element: navBarDoneButton, elementName: "\(navBarDoneButton) Not Found")
+    //    }
+    //
+    //    func tapNavBarSkipButton() {
+    //        Log.info("NavBar Skip button tap")
+    //        tapElement(element: navBarSkipButton, elementName: "\(navBarSkipButton) Not Found")
+    //    }
+    //
+    //    func verifyNavBarEditButton() {
+    //        waitForElement(navBarEditButton)
+    //        Log.pass("NavBar Edit button is visible")
+    //    }
+    //
+    //    func verifyNavBarDoneButton() {
+    //        waitForElement(navBarDoneButton)
+    //        Log.pass("NavBar Done button is visible")
+    //    }
+    //
     /*Keyboard related methods */
     
     func clearTextField(textField: XCUIElement) {
@@ -150,7 +150,7 @@ open class BasePage {
         var swipeCount = 0
         while(swipeCount < 10) {
             if(element.waitForExistence(timeout: 2.0)){break}
-            app!.gentleSwipe(.left)
+            //app!.gentleSwipe(.left)
             swipeCount = swipeCount + 1
         }
         waitForElement(element)
@@ -160,7 +160,7 @@ open class BasePage {
         Log.info("Swipe up the page")
         var swipeCount = 0
         while(swipeCount < 10 && !element.isHittable) {
-            app!.gentleSwipe(.up)
+            //app!.gentleSwipe(.up)
             swipeCount = swipeCount + 1
             sleep(5)
         }
@@ -183,7 +183,7 @@ open class BasePage {
     func gentleSwipeDown(element: XCUIElement) {
         var swipeCount = 0
         while(swipeCount < 10 && !element.isHittable) {
-            app!.gentleSwipe(.down)
+            //app!.gentleSwipe(.down)
             swipeCount = swipeCount + 1
             sleep(2)
         }
@@ -194,7 +194,7 @@ open class BasePage {
     func gentleSwipeUp(_ element: XCUIElement) {
         var swipeCount = 0
         while(swipeCount < 10 && !element.isHittable) {
-            app!.gentleSwipe(.up)
+           // app!.gentleSwipe(.up)
             swipeCount = swipeCount + 1
             sleep(4)
         }
@@ -220,7 +220,7 @@ open class BasePage {
 }
 
 //extension XCUIElement {
-//    
+//
 //    enum Direction: Int {
 //        case up, down, left, right
 //    }

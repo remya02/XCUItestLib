@@ -43,7 +43,7 @@ open class Log {
     
 }
 
-open func writeToFile(message: String){
+public func writeToFile(message: String){
     let fileName = "Test"
     let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
     

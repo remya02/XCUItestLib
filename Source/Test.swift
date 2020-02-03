@@ -2,10 +2,11 @@
 //  BaseTest.swift
 //  XCUItestLib
 //
-//  Created by Remya Surendran Anjamkudi on 29/01/20.
+//  Created by Remya Surendran Anjamkudi on 03/02/20.
 //  Copyright © 2020 Remya Surendran Anjamkudi. All rights reserved.
 //
 
+import Foundation
 
 
 import XCTest

@@ -14,11 +14,11 @@
 		8260B43023DAD86600198249 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8260B42F23DAD86600198249 /* Assets.xcassets */; };
 		8260B43323DAD86600198249 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8260B43123DAD86600198249 /* LaunchScreen.storyboard */; };
 		8260B43E23DAD86600198249 /* SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B43D23DAD86600198249 /* SampleUITests.swift */; };
-		8260B44723DAD8C600198249 /* XCUItestLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B44623DAD8C600198249 /* XCUItestLib.swift */; };
-		8260B48723E1C45200198249 /* BasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B48623E1C45200198249 /* BasePage.swift */; };
-		8260B48923E1C4A600198249 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B48823E1C4A600198249 /* BaseTest.swift */; };
-		8260B48B23E1C50200198249 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8260B48A23E1C50200198249 /* Logger.swift */; };
-		829F237423E4649C0021C9CF /* Sources in Resources */ = {isa = PBXBuildFile; fileRef = 829F237323E4649C0021C9CF /* Sources */; };
+		829F237E23E8026D0021C9CF /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F237D23E8026D0021C9CF /* Test.swift */; };
+		829F238023E8028B0021C9CF /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F237F23E8028B0021C9CF /* Page.swift */; };
+		829F238223E803100021C9CF /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F238123E803100021C9CF /* Logs.swift */; };
+		829F238423E8035F0021C9CF /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F238323E8035F0021C9CF /* Data.swift */; };
+		829F238623E8038C0021C9CF /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F238523E8038C0021C9CF /* StreamReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +45,11 @@
 		8260B43923DAD86600198249 /* SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8260B43D23DAD86600198249 /* SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUITests.swift; sourceTree = "<group>"; };
 		8260B43F23DAD86600198249 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8260B44623DAD8C600198249 /* XCUItestLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUItestLib.swift; sourceTree = "<group>"; };
-		8260B48623E1C45200198249 /* BasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePage.swift; sourceTree = "<group>"; };
-		8260B48823E1C4A600198249 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
-		8260B48A23E1C50200198249 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		829F237323E4649C0021C9CF /* Sources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sources; sourceTree = "<group>"; };
+		829F237D23E8026D0021C9CF /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		829F237F23E8028B0021C9CF /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		829F238123E803100021C9CF /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
+		829F238323E8035F0021C9CF /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		829F238523E8038C0021C9CF /* StreamReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +80,7 @@
 		8260B3C123D1923100198249 = {
 			isa = PBXGroup;
 			children = (
-				829F237323E4649C0021C9CF /* Sources */,
-				8260B48A23E1C50200198249 /* Logger.swift */,
-				8260B48823E1C4A600198249 /* BaseTest.swift */,
-				8260B48623E1C45200198249 /* BasePage.swift */,
-				8260B44623DAD8C600198249 /* XCUItestLib.swift */,
+				829F237C23E802530021C9CF /* Source */,
 				8260B3DB23D1A38600198249 /* XcuitestLib.podspec */,
 				8260B42723DAD86400198249 /* Sample */,
 				8260B43C23DAD86600198249 /* SampleUITests */,
@@ -131,6 +127,18 @@
 				8260B43F23DAD86600198249 /* Info.plist */,
 			);
 			path = SampleUITests;
+			sourceTree = "<group>";
+		};
+		829F237C23E802530021C9CF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				829F237D23E8026D0021C9CF /* Test.swift */,
+				829F237F23E8028B0021C9CF /* Page.swift */,
+				829F238123E803100021C9CF /* Logs.swift */,
+				829F238323E8035F0021C9CF /* Data.swift */,
+				829F238523E8038C0021C9CF /* StreamReader.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +256,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8260B3E823D1A56E00198249 /* XcuitestLib.podspec in Resources */,
-				829F237423E4649C0021C9CF /* Sources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8260B44723DAD8C600198249 /* XCUItestLib.swift in Sources */,
-				8260B48923E1C4A600198249 /* BaseTest.swift in Sources */,
-				8260B48723E1C45200198249 /* BasePage.swift in Sources */,
-				8260B48B23E1C50200198249 /* Logger.swift in Sources */,
+				829F238623E8038C0021C9CF /* StreamReader.swift in Sources */,
+				829F237E23E8026D0021C9CF /* Test.swift in Sources */,
+				829F238223E803100021C9CF /* Logs.swift in Sources */,
+				829F238023E8028B0021C9CF /* Page.swift in Sources */,
+				829F238423E8035F0021C9CF /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

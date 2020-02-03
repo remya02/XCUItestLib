@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'XcuitestLib'
-    s.version          = '1.0.1'
+    s.version          = '1.0.2'
     s.summary          = 'Library for UItest'
 
     s.description      = <<-DESC
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '10.1'
     #s.tvos.deployment_target = '10.3'
     s.swift_version = '4.0'
-    s.source_files = 'Sources/**/*'
+    s.source_files = "XCUItestLib", "XCUItestLib/**/*.{h,m}"
 
     s.framework = 'XCTest'
     s.pod_target_xcconfig = {
